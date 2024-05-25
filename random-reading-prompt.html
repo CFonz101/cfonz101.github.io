@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Reading Prompt</title>
+</head>
+<body>
+    <div id="prompt">Click the button to get a random reading prompt!</div>
+    <button onclick="generateRandomPrompt()">Get a New Prompt</button>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Array of reading prompts
+        const readingPrompts = [
+            "Read a book by a debut author.",
+            "Read a book set in a country you've never visited.",
+            "Read a book that was published in the year you were born.",
+            "Read a book with a one-word title.",
+            "Read a mystery or thriller novel.",
+            "Read a book recommended by a friend.",
+            "Read a book that has been adapted into a movie or TV show.",
+            "Read a book with a color in the title.",
+            "Read a classic novel that you've never read before.",
+            "Read a book by an author of a different nationality than you.",
+            "Read a science fiction or fantasy book.",
+            "Read a book that won a major literary award.",
+            "Read a book based on a true story.",
+            "Read a book that has a number in the title.",
+            "Read a graphic novel or comic book.",
+            "Read a book with an animal on the cover.",
+            "Read a historical fiction novel.",
+            "Read a book with a protagonist of the opposite gender.",
+            "Read a collection of short stories.",
+            "Read a book about a subject you know very little about."
+        ];
+
+        // Function to generate a random reading prompt
+        function generateRandomPrompt() {
+            const randomIndex = Math.floor(Math.random() * readingPrompts.length);
+            const randomPrompt = readingPrompts[randomIndex];
+            document.getElementById('prompt').innerText = randomPrompt;
+        }
+
+        // Add event listener to button after DOM content is loaded
+        document.querySelector('button').addEventListener('click', generateRandomPrompt);
+    });
+    </script>
+</body>
+</html>
